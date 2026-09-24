@@ -1,16 +1,69 @@
-# React + Vite
+# Around the U.S. - React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Around the U.S. es una aplicación web desarrollada como parte del programa de Desarrollo Web de TripleTen.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+En este proyecto se migró la aplicación original de JavaScript a React. La interfaz permite visualizar un perfil de usuario, mostrar una colección de tarjetas de lugares y abrir diferentes ventanas emergentes.
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Visualización del perfil del usuario.
+- Visualización de tarjetas de lugares.
+- Apertura de imágenes en una ventana emergente.
+- Ventana emergente para editar el perfil.
+- Ventana emergente para cambiar el avatar.
+- Ventana emergente para agregar una nueva tarjeta.
+- Componentes reutilizables en React.
+- Renderizado de listas utilizando `map()`.
+- Manejo de ventanas emergentes utilizando `useState`.
 
-## Expanding the ESLint configuration
+## Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- HTML5
+- CSS3
+- JavaScript
+- React
+- Vite
+- Git y GitHub
+- Metodología BEM
+
+## Instalación
+
+Clona el repositorio:
+
+```bash
+git clone https://github.com/LDuarte37/web_project_around_react.git
+```
+
+Entra en la carpeta del proyecto:
+
+```bash
+cd web_project_around_react
+```
+
+Instala las dependencias:
+
+```bash
+npm install
+```
+
+## Ejecutar el proyecto
+
+Para iniciar el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+Después abre en el navegador la dirección que indique Vite.
+
+## Compilar para producción
+
+```bash
+npm run build
+```
+
+## Autor
+
+Luis Duarte
