@@ -1,10 +1,17 @@
+import { useContext } from "react";
 import likeIcon from "../../../../images/likeBTN.svg";
 import likeActiveIcon from "../../../../images/likeBTN_Active.svg";
 import ImagePopup from "../ImagePopup/ImagePopup.jsx";
+import CurrentUserContext from "../../../../contexts/CurrentUserContext.js";
 
 export default function Card(props) {
   const { card, handleOpenPopup, onCardLike, onCardDelete } = props;
+  const { currentUser } = useContext(CurrentUserContext);
+
   const { name, link, isLiked } = card;
+
+  const isOwn =
+    card.owner?._id === currentUser._id || card.owner === currentUser._id;
 
   const cardLikeButtonClassName = `card__like-btn ${
     isLiked ? "card__like-btn_active" : ""
@@ -24,12 +31,14 @@ export default function Card(props) {
 
   return (
     <li className="card">
-      <button
-        className="card__delete-btn"
-        type="button"
-        aria-label="Eliminar tarjeta"
-        onClick={handleDeleteClick}
-      ></button>
+      {isOwn && (
+        <button
+          className="card__delete-btn"
+          type="button"
+          aria-label="Eliminar tarjeta"
+          onClick={handleDeleteClick}
+        ></button>
+      )}
       <img
         className="card__image"
         src={link}
@@ -50,7 +59,7 @@ export default function Card(props) {
             alt=""
             className="card__like-icon"
           />
-        </button>{" "}
+        </button>
       </div>
     </li>
   );
